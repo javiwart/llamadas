@@ -1,3 +1,12 @@
 spark-shell
 val llamadasDF = spark.read.option("header", "true").csv("C:/datos/llamadas.csv")
+val numFilas = llamadasDF.count()
+println(s"Número de líneas leídas: $numFilas")
+// 1. Leer el archivo CSV
+val llamadasDF = spark.read.option("header", "true").csv("C:/datos/llamadas.csv")
 
+// 2. Contar el número de filas
+val numFilas = llamadasDF.count()
+
+// 3. Mostrar el resultado
+println(s"Número de líneas leídas: $numFilas")
